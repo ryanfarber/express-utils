@@ -1,2 +1,2 @@
 # express-utils
-tools for express servers
+utils for express servers
