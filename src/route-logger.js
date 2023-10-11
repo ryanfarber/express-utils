@@ -4,7 +4,6 @@ const Logger = require("@ryanforever/logger").v2
 const logger = new Logger(__filename, {debug: false, style: 0})
 
 
-
 function routeLogger(config = {}) {
 	let ignore = config.ignore ?? []
 	ignore = ignore.map(x => {
@@ -12,9 +11,8 @@ function routeLogger(config = {}) {
 		x = x.replace(/\/+/gi, "/")
 		return x
 	})
-
 	return function(req, res, next) {
-		if (ignore.includes(req.method)) return
+		if (ignore.includes(req.path)) return next()
 		logger.info(`↔ ${req.method}${req.path}`)
 		next()
 	}
