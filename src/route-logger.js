@@ -5,16 +5,16 @@ const logger = new Logger(__filename, {debug: false, style: 0})
 
 
 
-routeLogger(config = {}) {
+function routeLogger(config = {}) {
 	let ignore = config.ignore ?? []
 	ignore = ignore.map(x => {
 		if (!x.startsWith("/")) x = `/${x}`
 		x = x.replace(/\/+/gi, "/")
 		return x
 	})
-	console.log(ignore)
+
 	return function(req, res, next) {
-		if (ignore.includes)
+		if (ignore.includes(req.method)) return
 		logger.info(`↔ ${req.method}${req.path}`)
 		next()
 	}
