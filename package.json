@@ -1,14 +1,15 @@
 {
   "dependencies": {
     "@ryanforever/logger": "^5.0.3",
+    "express-basic-auth": "^1.2.1",
     "kind-of": "^6.0.3"
   },
   "name": "@ryanforever/express-utils",
   "description": "utils for express servers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon ./test/server.js",
     "build": "npm version patch --no-git-tag-version && npm i && npm publish"
   },
   "keywords": [
@@ -17,5 +18,8 @@
     "utils"
   ],
   "author": "ryan forever",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
 }
