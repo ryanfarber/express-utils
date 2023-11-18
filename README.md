@@ -35,7 +35,6 @@ app.use(routeLogger({
 }))
 ````
 
-
 ## echoRequest
 ```javascript
 const {echoRequest} = require("@ryanforever/express-utils")
@@ -66,3 +65,16 @@ app.get("/users", echoRequest)
 */
 ````
 
+## basicAuth
+forked from [express-basic-auth](https://www.npmjs.com/package/express-basic-auth)
+```javascript
+const {basicAuth} = require("@ryanforever/express-utils")
+
+const app = require("express")()
+
+
+app.use(basicAuth({
+	users: {"ryanforever": "abcd1234"},
+	challenge: true // use for popup password input
+}))
+````
