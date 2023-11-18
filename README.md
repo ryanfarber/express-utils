@@ -1,5 +1,13 @@
 # express-utils
-utils for express servers
+simple, basic utilities for express servers
+
+- send
+- sendStatus
+- echoRequest
+- basicAuth
+- whitelist
+- routeLogger
+- forceHttps
 
 
 ## send
