@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "@ryanforever/logger": "^5.0.2",
-    "kind-of": "^6.0.3",
-    "publish": "^0.6.0"
+    "@ryanforever/logger": "^5.0.3",
+    "kind-of": "^6.0.3"
   },
   "name": "@ryanforever/express-utils",
   "description": "utils for express servers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm version patch --no-git-tag-version && npm i && npm publish"
   },
   "keywords": [
     "express",
