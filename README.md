@@ -27,8 +27,7 @@ app.get("/ping", sendStatus(200))
 ## routeLogger
 ```javascript
 const {routeLogger} = require("@ryanforever/express-utils")
-const express = require("express")
-const app = express()
+const express = require("express")()
 
 app.use(routeLogger({
 	ignore: ["/health"] // choose paths to ignore
@@ -69,9 +68,7 @@ app.get("/users", echoRequest)
 forked from [express-basic-auth](https://www.npmjs.com/package/express-basic-auth)
 ```javascript
 const {basicAuth} = require("@ryanforever/express-utils")
-
 const app = require("express")()
-
 
 app.use(basicAuth({
 	users: {"ryanforever": "abcd1234"},
