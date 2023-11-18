@@ -6,7 +6,7 @@
   },
   "name": "@ryanforever/express-utils",
   "description": "utils for express servers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "test": "nodemon ./test/server.js",
